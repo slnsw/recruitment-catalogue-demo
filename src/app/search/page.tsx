@@ -20,11 +20,16 @@ export default async function Search({ searchParams }) {
   const renderedRecords = [];
   for (var i = 0; i < records.length; i++) {
                 const renderedRecord = (
-                    <div>
-                        <a href={"/record/" + records[i].id}>
+                    <tr>
+                        <td>
                             <h1>{records[i].title}</h1>
+                        </td>
+                        <td>
+                        <a href={"/record/" + records[i].id}>
+                            Read more
                         </a>
-                        </div>
+                        </td>
+                        </tr>
                 );
         renderedRecords.push(renderedRecord);
             }
@@ -32,10 +37,10 @@ export default async function Search({ searchParams }) {
     return <>
     <Header />
     <h1>{"Search results for {q}".replace('{q}', q)}</h1>
-    <div>
+    <table>
         {
             renderedRecords
         }
-        </div>
+        </table>
 </>
 }
