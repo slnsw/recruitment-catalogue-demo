@@ -8,6 +8,7 @@ export default function Home() {
     <p>This is the home page</p>
     <h1>Search catalogue</h1>
     <SearchForm />
+    <p>eg. "lorem", "ipsum"</p>
     </>
   );
 }
