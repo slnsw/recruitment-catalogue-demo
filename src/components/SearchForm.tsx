@@ -10,7 +10,6 @@ const SearchForm = () => {
                 e.preventDefault();
                 document.getElementById('search-form').submit();
             }}>submit</a>
-            {/* <input type="submit" /> */}
             </form>
     );
 };
